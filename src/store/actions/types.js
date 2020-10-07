@@ -1,0 +1,13 @@
+/* MENUS */
+export const EXTERNAL_CLICK = "EXTERNAL_CLICK";
+export const MENU_CLOSED = "MENU_CLOSED";
+export const MENU_OPENED = "MENU_OPENED";
+
+/* MODALS */
+export const MODAL_CLOSED = "MODAL_CLOSED";
+export const MODAL_OPENED = "MODAL_OPENED";
+
+/* INPUTS */
+export const INPUT_CREATED = "INPUT_CREATED";
+export const INPUT_UPDATED = "INPUT_UPDATED";
+export const INPUT_DELETED = "INPUT_DELETED";

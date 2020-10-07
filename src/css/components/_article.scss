@@ -1,0 +1,65 @@
+.section {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    margin: 0 auto 5rem auto;
+    padding: 1rem;
+    max-width: 90rem;
+    box-sizing: border-box;
+
+    > :not(:last-child) {
+        margin-right: 1rem;
+
+        @media #{$media-900-w} { margin-right: 0; }
+    }
+
+    @media #{$media-900-w} {
+        flex-flow: column;
+        align-items: center;
+    }
+}
+
+.project {
+    display: flex;
+    flex-flow: column;
+    max-width: 50%;
+
+    @media #{$media-900-w} {
+        align-items: center;
+        max-width: 100%;
+    }
+
+    &-title {
+        margin: 0 0 0.5rem 0;
+        font-size: 2em;
+
+        @media #{$media-900-w} { margin-top: 0.5rem; }
+    }
+
+    &-desc {
+        margin-bottom: 1rem;
+        line-height: 1.7em;
+        color: $white-2;
+
+        @media #{$media-900-w} { text-align: center; }
+    }
+
+    &-skills {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        filter: grayscale(1);
+        transition: 0.5s all ease-in-out;
+
+        &:hover, .in-view & { filter: none; }
+
+        .skill-icon {
+            width: auto;
+            height: 2rem;
+            margin-bottom: 1.5rem;
+            transition: inherit;
+
+            &:not(:last-child) { margin-right: 1.5rem; }
+        }
+    }
+}
