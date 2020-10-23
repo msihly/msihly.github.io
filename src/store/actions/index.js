@@ -1,21 +1,5 @@
 import * as types from "./types";
 
-/******************** MENUS ********************/
-export const externalClick = () => ({
-    type: types.EXTERNAL_CLICK,
-    payload: {}
-});
-
-export const menuClosed = (id, parent = "") => ({
-    type: types.MENU_CLOSED,
-    payload: { id, parent }
-});
-
-export const menuOpened = (id, parent = "") => ({
-    type: types.MENU_OPENED,
-    payload: { id, parent }
-});
-
 /******************** MODALS ********************/
 export const modalClosed = (id) => ({
     type: types.MODAL_CLOSED,
@@ -41,4 +25,20 @@ export const inputDeleted = (id) => ({
 export const inputUpdated = (id, value) => ({
     type: types.INPUT_UPDATED,
     payload: { id, value }
+});
+
+/******************** OBSERVERS ********************/
+export const observerCreated = (id) => ({
+    type: types.OBSERVER_CREATED,
+    payload: { id }
+});
+
+export const observerDeleted = (id) => ({
+    type: types.OBSERVER_DELETED,
+    payload: { id }
+});
+
+export const observerUpdated = (id, viewState) => ({
+    type: types.OBSERVER_UPDATED,
+    payload: { id, viewState }
 });

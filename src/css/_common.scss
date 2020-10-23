@@ -10,23 +10,17 @@ html, body {
     @media #{$media-500-wh} { font-size: 14px; }
 }
 
-figure {
-    margin: 0;
-}
+figure { margin: 0; }
 
 table {
     border-collapse: collapse;
     font-weight: 400;
 }
 
-th, td {
-    padding: 0.35em;
-}
+th, td { padding: 0.35em; }
 
 .table-vert {
-    tbody > tr > th {
-        text-align: left;
-    }
+    tbody > tr > th { text-align: left; }
 
     &.right > tbody > tr {
         > th {
@@ -34,23 +28,15 @@ th, td {
             padding-right: 0.5em;
         }
 
-        > td {
-            padding-left: 0.5em;
-        }
+        > td { padding-left: 0.5em; }
     }
 }
 
-h1, h2, h3 {
-    margin: 0.5rem 0;
-}
+h1, h2, h3 { margin: 0.5rem 0; }
 
-h4, h5, h6 {
-    margin: 0 0 0.5rem 0;
-}
+h4, h5, h6 { margin: 0 0 0.5rem 0; }
 
-p, span {
-    color: var(--foreground-color);
-}
+p, span { color: var(--foreground-color); }
 
 p {
     margin: 0;
@@ -58,7 +44,13 @@ p {
 }
 
 a {
+    color: $red-3;
     text-decoration: none;
+    transition: 0.1s all ease-in-out;
+
+    &:visited { color: $red-3; }
+
+    &:hover { color: $red-4; }
 }
 
 button {
@@ -75,9 +67,7 @@ button {
     cursor: pointer;
     transition: all 0.2s;
 
-    &:hover {
-        background: $blue-3;
-    }
+    &:hover { background: $blue-3; }
 }
 
 .btn-hollow {
@@ -92,9 +82,7 @@ button {
     border: 2px solid var(--foreground-color);
     border-radius: 0;
 
-    &:focus {
-        outline: none;
-    }
+    &:focus { outline: none; }
 
     &:hover {
         border-radius: 3px;
@@ -115,34 +103,20 @@ button {
     transition: visibility 0s;
 }
 
-.hidden {
-    display: none !important;
-}
+.hidden { display: none !important; }
 
-.hidden-panel {
-    opacity: 0;
-}
+.hidden-panel { opacity: 0; }
 
-.relative {
-    position: relative;
-}
+.relative { position: relative; }
 
-.flex-end {
-    align-self: flex-end;
-}
+.flex-end { align-self: flex-end; }
 
-.a-center {
-    align-items: center;
-}
+.a-center { align-items: center; }
 
-.j-center {
-    justify-content: center;
-}
+.j-center { justify-content: center; }
 
 .pad-ctn {
-    &-1, &-2, &-3 {
-        box-sizing: border-box;
-    }
+    &-1, &-2, &-3 { box-sizing: border-box; }
 
     &-1 { padding: 1rem; }
 
@@ -155,17 +129,11 @@ button {
     }
 }
 
-.full-width {
-    width: 100% !important;
-}
+.full-width { width: 100% !important; }
 
-.no-mgn {
-    margin: 0 !important;
-}
+.no-mgn { margin: 0 !important; }
 
-.mgn-btm {
-    margin-bottom: 0.3rem;
-}
+.mgn-btm { margin-bottom: 0.3rem; }
 
 // COLORS
 .blue {

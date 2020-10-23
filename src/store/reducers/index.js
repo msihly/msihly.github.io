@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import menus from "./menus.js";
-import modals from "./modals.js";
-import inputs from "./inputs.js";
+import modals from "./modals";
+import inputs from "./inputs";
+import observers from "./observers";
 
-const rootReducer = combineReducers({ menus, modals, inputs });
+const rootReducer = combineReducers({ modals, inputs, observers });
 
 export default rootReducer;

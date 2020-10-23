@@ -8,6 +8,11 @@
     border-radius: 0.5rem;
     overflow: hidden;
 
+    .carousel-modal & {
+        width: 100%;
+        height: auto;
+    }
+
     &-left, &-right {
         position: absolute;
         top: 0;
@@ -37,7 +42,7 @@
 
         &::after { transform: rotate(90deg); }
 
-        &:hover { background: linear-gradient(to right, rgba($black-1, 0.4), transparent); }
+        &:hover { background: linear-gradient(to right, rgba($black-1, 0.5), transparent); }
     }
 
     &-right {
@@ -45,7 +50,7 @@
 
         &::after { transform: rotate(270deg); }
 
-        &:hover { background: linear-gradient(to left, rgba($black-1, 0.4), transparent); }
+        &:hover { background: linear-gradient(to left, rgba($black-1, 0.5), transparent); }
     }
 
     &-indicators {
@@ -71,6 +76,7 @@
                 content: $symbol-bullet;
                 width: 0.25rem;
                 height: 0.25rem;
+                text-shadow: 1px 1px 4px rgba(black, 0.7);
             }
 
             &:hover { opacity: 1; }
@@ -79,32 +85,43 @@
         }
     }
 
+    .lightbox-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0.3rem auto 0;
+        border-radius: 4px;
+        width: 2rem;
+        height: 2rem;
+        background: url("../../media/fullscreen-btn.svg") center no-repeat;
+        filter: invert(1);
+        opacity: 0.1;
+        z-index: 10;
+        transition: 0.2s all ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(white, 0.4);
+            opacity: 1;
+        }
+    }
+
     img, video {
         width: 100%;
         border-radius: inherit;
-    }
 
-    img {
-        object-fit: cover;
-
-        &:hover { animation: movePosition 3s ease-in-out; }
-
-        @keyframes movePosition {
-            0%, 100% { object-position: center; }
-            25%	{ object-position: left top; }
-            75% { object-position: right bottom; }
+        .carousel-modal & {
+            background-color: transparent;
+            object-fit: contain;
         }
     }
 
-    video {
-        background-color: black;
-    }
+    img { object-fit: cover; }
+
+    video { background-color: black; }
 
     &.transition {
-        &-prev, &-next {
-            img:hover { animation: none; }
-        }
-
         &-prev {
             img, video { animation: prevSlide 1s ease-in-out forwards; }
         }
@@ -121,6 +138,20 @@
         @keyframes nextSlide {
             0% { transform: translateX(0); }
             100% { transform: translateX(-100%); }
+        }
+    }
+
+    &:not(.transition-prev):not(.transition-next) {
+        img {
+            animation: movePosition 3s linear;
+
+            &:hover { animation: movePosition 3s linear infinite; }
+        }
+
+        @keyframes movePosition {
+            0%, 100% { object-position: center; }
+            20%, 30% { object-position: left top; }
+            70%, 80% { object-position: right bottom; }
         }
     }
 }

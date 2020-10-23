@@ -17,8 +17,8 @@ build/
 *.env.*
 npm-debug.log*
 .vscode/
-images/components/
-src/media/components/
+images/_components/
+src/media/_components/
 *.psd
 *.ai
 *.db
