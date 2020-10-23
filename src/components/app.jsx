@@ -32,7 +32,7 @@ const App = () => (
         <Section id="OneMark-Ext">
             <Carousel autoplay="3000" hasIndicators hasLightbox>
                 <img src={Media.OneMark.Splash} alt="Splash art for OneMark" />
-                <video src={Media.OneMark.MultiTags} />
+                <img src={Media.OneMarkExtOptions} alt="OneMark Add-On Extension - Options Page" />
             </Carousel>
             <ProjectDesc title="OneMark Add-On" link="https://chrome.google.com/webstore/detail/onemark/cjklnajnighcegajggjfmjecfidllinm"
                 skills={["JavaScript", "Node", "Express", "CSS", "HTML", "PHP", "MySQL"]}>
