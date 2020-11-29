@@ -4,10 +4,9 @@ import * as actions from "../../store/actions";
 import { Modal } from "../popovers";
 import { rotateArrayPos } from "../../utils";
 
-const Indicator = ({ current, pos, action }) => {
-    const handleClick = () => action(pos);
-    return (<span onClick={handleClick} className={pos === current ? "active" : ""}></span>);
-};
+const Indicator = ({ current, pos, action }) => (
+    <span onClick={() => action(pos)} className={pos === current ? "active" : ""}></span>
+);
 
 class Carousel extends Component {
     constructor(props) {
