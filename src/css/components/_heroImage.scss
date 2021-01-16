@@ -8,6 +8,7 @@
         width: 100%;
         height: 100vh;
         background: linear-gradient(to top, $theme-color 8%, rgba($theme-color, 0.2), transparent 80%), url("../../media/hero-image.jpg") no-repeat top;
+        background-size: cover;
 
         &::after {
             content: url("../../media/down-arrow-double.svg");

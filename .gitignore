@@ -22,3 +22,5 @@ src/media/_components/
 *.psd
 *.ai
 *.db
+
+public/analytics.js
