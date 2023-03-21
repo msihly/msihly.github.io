@@ -1,8 +1,25 @@
 .home {
-    color: $white-3;
+  color: $white-3;
 
-    .dummy-content {
-        width: 80%;
-        height: 400px;
-    }
+  .dummy-content {
+    width: 80%;
+    height: 400px;
+  }
+
+  .deprecation-notice {
+    border: 2px solid #fc9a21;
+    border-radius: 0.6rem;
+    margin: 0 1rem 3rem;
+    padding: 0.8rem 4rem;
+    background-color: #19191e;
+
+     h2 {
+      color: #fc9a21;
+      text-align: center;
+     }
+
+     h4 {
+      text-align: center;
+     }
+  }
 }
